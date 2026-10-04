@@ -1,0 +1,1 @@
+Write the output files in out/ now (out/*.csv, and out/summary.json for L2). Do not reread files you already read and do not write test tools; write a minimal working version first, then fix it. The requirements are the same as in your first message.

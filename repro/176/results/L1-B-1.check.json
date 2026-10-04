@@ -1,0 +1,46 @@
+{
+ "schema": "check/1",
+ "level": "L1",
+ "run_dir": "L1-B-1",
+ "gates": {
+  "G1_file_parses": {
+   "pass": true,
+   "points": 10,
+   "detail": "out/parts.csv"
+  },
+  "G2_header_exact": {
+   "pass": true,
+   "points": 10,
+   "detail": [
+    "part_no",
+    "description",
+    "unit",
+    "unit_price_cny",
+    "stock"
+   ]
+  },
+  "G3_row_count": {
+   "pass": true,
+   "points": 10,
+   "detail": "12/12"
+  },
+  "G4_no_table1_rows": {
+   "pass": true,
+   "points": 10,
+   "detail": 0
+  }
+ },
+ "gate_points": 40,
+ "all_gates_pass": true,
+ "metrics": {
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "tp_cells": 48,
+  "truth_cells": 48,
+  "got_cells": 48,
+  "mismatches_first15": []
+ },
+ "correctness_points": 20.0,
+ "f1": 1.0
+}

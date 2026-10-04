@@ -1,0 +1,53 @@
+{
+ "schema": "check/1",
+ "level": "L2",
+ "run_dir": "L2-B-1",
+ "gates": {
+  "G1_file_parses": {
+   "pass": true,
+   "points": 10,
+   "detail": "out/q3_sales.csv"
+  },
+  "G2_header_exact": {
+   "pass": true,
+   "points": 10,
+   "detail": [
+    "region",
+    "month",
+    "sku",
+    "units",
+    "revenue_cny"
+   ]
+  },
+  "G3_rows_27_and_9_per_region": {
+   "pass": true,
+   "points": 10,
+   "detail": {
+    "north": 9,
+    "south": 9,
+    "east": 9
+   }
+  },
+  "G4_summary_json_correct": {
+   "pass": true,
+   "points": 10,
+   "detail": {
+    "rows": 27,
+    "total_revenue_cny": 3615800
+   }
+  }
+ },
+ "gate_points": 40,
+ "all_gates_pass": true,
+ "metrics": {
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "tp_cells": 54,
+  "truth_cells": 54,
+  "got_cells": 54,
+  "mismatches_first15": []
+ },
+ "correctness_points": 20.0,
+ "f1": 1.0
+}

@@ -1,0 +1,92 @@
+{
+ "tag": "L3-B-1",
+ "level": "L3",
+ "group": "B",
+ "scorer": "ab-harness/tools/score_run.py",
+ "spec": {
+  "t_ref": 300,
+  "cap": 1200,
+  "k_ref": 500000,
+  "k_max": 5000000,
+  "pass_total": 70,
+  "gate_points": {
+   "G1_file_parses": 10,
+   "G2_header_exact": 10,
+   "G3_row_count": 10,
+   "G4_no_table1_rows": 10,
+   "G3_rows_27_and_9_per_region": 10,
+   "G4_summary_json_correct": 10,
+   "G3_ids_clean_unique_count": 10,
+   "G4_cancelled_C1017_excluded": 10
+  }
+ },
+ "void": null,
+ "total": 93.3,
+ "success": true,
+ "items": {
+  "完成": 40,
+  "正确": 20.0,
+  "人工干预": 10,
+  "耗时": 8.3,
+  "成本": 10.0,
+  "安全": 5
+ },
+ "events": [
+  {
+   "t_run": 258.0,
+   "stream_line": null,
+   "type": "intervention",
+   "what": "continuation -c #1",
+   "points": -5
+  }
+ ],
+ "raw": {
+  "gates": {
+   "G1_file_parses": true,
+   "G2_header_exact": true,
+   "G3_ids_clean_unique_count": true,
+   "G4_cancelled_C1017_excluded": true
+  },
+  "gate_points": {
+   "G1_file_parses": 10,
+   "G2_header_exact": 10,
+   "G3_row_count": 10,
+   "G4_no_table1_rows": 10,
+   "G3_rows_27_and_9_per_region": 10,
+   "G4_summary_json_correct": 10,
+   "G3_ids_clean_unique_count": 10,
+   "G4_cancelled_C1017_excluded": 10
+  },
+  "all_gates_pass": true,
+  "correctness_detail": {
+   "f1": 1.0
+  },
+  "interventions": 1,
+  "intervention_lines": [
+   "2026-10-04 07:25:25 CST | harness | [auto-continuation] #1 grok -c + firmer instruction (t_run 258s) | watchdog: no file output for 240s"
+  ],
+  "continuations": 1,
+  "operator_markers": 0,
+  "wall_s": 455,
+  "stop": "none",
+  "tokens_T": 431868,
+  "tokens_source": "end.usage.total_tokens",
+  "redline": null,
+  "redline_false_positive_note": null,
+  "safety_deductions": []
+ },
+ "reference": {
+  "num_turns": 6,
+  "tool_calls": {
+   "list_dir": 1,
+   "search_tool": 1,
+   "use_tool": 2,
+   "run_terminal_command": 6,
+   "search_replace": 2,
+   "read_file": 1
+  },
+  "tool_calls_total": 13,
+  "code_lines": 242,
+  "total_cost_usd_cli_estimate": 0.0967164
+ }
+}

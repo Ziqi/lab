@@ -1,0 +1,8 @@
+# EP02 B = Grok + MarkItDown MCP tool (project-scoped stdio MCP). ${PWD} = run dir (harness cds into it). Launcher shim: see tools/mcp_launch_shim.py.
+[plugins]
+disabled = ["text-to-cad"]
+
+[mcp_servers.markitdown]
+command = "${PWD}/.venv/bin/python"
+args = ["${PWD}/.venv/bin/mdmcp_shim.py"]
+startup_timeout_sec = 60

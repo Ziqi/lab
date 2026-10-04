@@ -1,0 +1,10 @@
+Write files first: create your extraction script in this folder right away (for example extract.py), run it with .venv/bin/python, write the output files, then check them yourself and fix. Do not write test harnesses; the operator checks the result with an independent script.
+Network access is blocked. Do not download or install anything (no pip, npm, npx, uv, curl, wget). Python 3.13 in .venv has pdfplumber, openpyxl, python-pptx, python-docx and pandas. If a document-conversion MCP tool is available in this session, you may use it. Stay inside this folder: do not read or list anything outside it, do not inspect processes, logs or other directories, never read credential or config files. Never log in, upload, or send anything anywhere. All input files are fictional test data.
+Task (L3): build a clean contract register.
+Inputs: input/contract_register.pdf (a 3-page register; watch for running page headers and footers, repeated table headers, page subtotal rows, vendor cells that span several rows, date formats that change between pages, and footnotes) and input/amendments.docx (amendments that must be applied on top of the register).
+Output: out/contracts.csv, UTF-8, header exactly: contract_id,vendor,start_date,amount_cny
+- One row per contract that is still valid, after applying the amendments and any exclusions stated in the documents.
+- contract_id as printed (C-1001 style); vendor as the full vendor name on every row; start_date as YYYY-MM-DD; amount_cny as a plain number with two decimals and no currency text or separators.
+- No header, footer, subtotal or note rows.
+Acceptance (checked automatically): CSV parses, header exact, the correct set of contracts (unique ids, no subtotal or header rows, excluded contracts absent), and every cell matches the documents after amendments.
+Time limit: 10 minutes. When done, list the files you created.

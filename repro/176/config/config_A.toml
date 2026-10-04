@@ -1,0 +1,3 @@
+# EP02 A = Grok alone. text-to-cad is globally enabled on the box, so it is disabled here (and in B).
+[plugins]
+disabled = ["text-to-cad"]

@@ -1,0 +1,8 @@
+Write files first: create your extraction script in this folder right away (for example extract.py), run it with .venv/bin/python, write the output files, then check them yourself and fix. Do not write test harnesses; the operator checks the result with an independent script.
+Network access is blocked. Do not download or install anything (no pip, npm, npx, uv, curl, wget). Python 3.13 in .venv has pdfplumber, openpyxl, python-pptx, python-docx and pandas. If a document-conversion MCP tool is available in this session, you may use it. Stay inside this folder: do not read or list anything outside it, do not inspect processes, logs or other directories, never read credential or config files. Never log in, upload, or send anything anywhere. All input files are fictional test data.
+Task (L1): input/supplier_report.pdf contains two tables. Extract only "Table 2: Parts price list" into out/parts.csv.
+CSV format: UTF-8, comma separated, header exactly: part_no,description,unit,unit_price_cny,stock
+- part_no as printed (for example LF-P-0101); unit_price_cny as a plain number without thousands separators (for example 1234.50); stock as an integer.
+- One row per part, no total rows, no rows from Table 1.
+Acceptance (checked automatically): out/parts.csv parses; header exact; exactly the parts of Table 2 (12 rows); no Table 1 rows; cell values match the PDF.
+Time limit: 10 minutes. When done, list the files you created.

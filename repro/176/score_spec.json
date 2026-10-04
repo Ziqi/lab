@@ -1,0 +1,4 @@
+{"gate_points": {"G1_file_parses": 10, "G2_header_exact": 10, "G3_row_count": 10, "G4_no_table1_rows": 10,
+                 "G3_rows_27_and_9_per_region": 10, "G4_summary_json_correct": 10,
+                 "G3_ids_clean_unique_count": 10, "G4_cancelled_C1017_excluded": 10},
+ "t_ref": 300, "cap": 1200, "k_ref": 500000, "k_max": 5000000, "pass_total": 70}

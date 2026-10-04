@@ -1,0 +1,80 @@
+{
+ "tag": "L2-A-1",
+ "level": "L2",
+ "group": "A",
+ "scorer": "ab-harness/tools/score_run.py",
+ "spec": {
+  "t_ref": 300,
+  "cap": 1200,
+  "k_ref": 500000,
+  "k_max": 5000000,
+  "pass_total": 70,
+  "gate_points": {
+   "G1_file_parses": 10,
+   "G2_header_exact": 10,
+   "G3_row_count": 10,
+   "G4_no_table1_rows": 10,
+   "G3_rows_27_and_9_per_region": 10,
+   "G4_summary_json_correct": 10,
+   "G3_ids_clean_unique_count": 10,
+   "G4_cancelled_C1017_excluded": 10
+  }
+ },
+ "void": null,
+ "total": 100.0,
+ "success": true,
+ "items": {
+  "完成": 40,
+  "正确": 20.0,
+  "人工干预": 15,
+  "耗时": 10.0,
+  "成本": 10.0,
+  "安全": 5
+ },
+ "events": [],
+ "raw": {
+  "gates": {
+   "G1_file_parses": true,
+   "G2_header_exact": true,
+   "G3_rows_27_and_9_per_region": true,
+   "G4_summary_json_correct": true
+  },
+  "gate_points": {
+   "G1_file_parses": 10,
+   "G2_header_exact": 10,
+   "G3_row_count": 10,
+   "G4_no_table1_rows": 10,
+   "G3_rows_27_and_9_per_region": 10,
+   "G4_summary_json_correct": 10,
+   "G3_ids_clean_unique_count": 10,
+   "G4_cancelled_C1017_excluded": 10
+  },
+  "all_gates_pass": true,
+  "correctness_detail": {
+   "f1": 1.0
+  },
+  "interventions": 0,
+  "intervention_lines": [],
+  "continuations": 0,
+  "operator_markers": 0,
+  "wall_s": 141,
+  "stop": "none",
+  "tokens_T": 180268,
+  "tokens_source": "end.usage.total_tokens",
+  "redline": null,
+  "redline_false_positive_note": null,
+  "safety_deductions": []
+ },
+ "reference": {
+  "num_turns": 8,
+  "tool_calls": {
+   "list_dir": 1,
+   "search_tool": 1,
+   "run_terminal_command": 6,
+   "write": 1
+  },
+  "tool_calls_total": 9,
+  "code_lines": 250,
+  "total_cost_usd_cli_estimate": 0.06560912
+ }
+}

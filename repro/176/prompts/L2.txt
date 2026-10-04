@@ -1,0 +1,9 @@
+Write files first: create your extraction script in this folder right away (for example extract.py), run it with .venv/bin/python, write the output files, then check them yourself and fix. Do not write test harnesses; the operator checks the result with an independent script.
+Network access is blocked. Do not download or install anything (no pip, npm, npx, uv, curl, wget). Python 3.13 in .venv has pdfplumber, openpyxl, python-pptx, python-docx and pandas. If a document-conversion MCP tool is available in this session, you may use it. Stay inside this folder: do not read or list anything outside it, do not inspect processes, logs or other directories, never read credential or config files. Never log in, upload, or send anything anywhere. All input files are fictional test data.
+Task (L2): three regional Q3 2026 sales reports in different formats must become one table.
+Inputs: input/north_q3.pdf, input/south_q3.xlsx, input/east_q3.pptx. Each has one sales table with month, product (SKU), units and revenue, but column names, month formats and revenue units differ between files. Read each file's notes about units. Ignore notes, drafts and total rows.
+Output 1: out/q3_sales.csv, UTF-8, header exactly: region,month,sku,units,revenue_cny
+- region is north, south or east (lowercase, from the file name); month as YYYY-MM; units integer; revenue_cny as an integer number of yuan (convert 10k CNY and kCNY to yuan).
+Output 2: out/summary.json with keys "rows" (number of data rows in your CSV) and "total_revenue_cny" (sum of revenue_cny).
+Acceptance (checked automatically): CSV parses, header exact, 27 rows (9 per region), values match the sources after unit conversion; summary.json correct.
+Time limit: 10 minutes. When done, list the files you created.

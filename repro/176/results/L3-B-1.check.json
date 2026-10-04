@@ -1,0 +1,45 @@
+{
+ "schema": "check/1",
+ "level": "L3",
+ "run_dir": "L3-B-1",
+ "gates": {
+  "G1_file_parses": {
+   "pass": true,
+   "points": 10,
+   "detail": "out/contracts.csv"
+  },
+  "G2_header_exact": {
+   "pass": true,
+   "points": 10,
+   "detail": [
+    "contract_id",
+    "vendor",
+    "start_date",
+    "amount_cny"
+   ]
+  },
+  "G3_ids_clean_unique_count": {
+   "pass": true,
+   "points": 10,
+   "detail": "23/23, bad=[]"
+  },
+  "G4_cancelled_C1017_excluded": {
+   "pass": true,
+   "points": 10,
+   "detail": false
+  }
+ },
+ "gate_points": 40,
+ "all_gates_pass": true,
+ "metrics": {
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "tp_cells": 69,
+  "truth_cells": 69,
+  "got_cells": 69,
+  "mismatches_first15": []
+ },
+ "correctness_points": 20.0,
+ "f1": 1.0
+}
